@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,10 +8,8 @@ import { MissiondetailsComponent } from './missiondetails/missiondetails.compone
 // Service and other necessary imports
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
 @NgModule({
   declarations: [
-    AppComponent,
     MissionListComponent,
     MissiondetailsComponent,
   ],
@@ -19,9 +17,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+bootstrapApplication(AppModule);
